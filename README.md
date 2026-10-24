@@ -6,7 +6,7 @@ This repository contains a Python script (`messy.py`) that processes student tes
 
 ---
 
-## 📌 Prompts Used in Experimentation
+## Prompts Used in Experimentation
 
 The following prompts were executed in the Cursor workspace during development[cite: 2, 3]:
 
@@ -21,7 +21,7 @@ The following prompts were executed in the Cursor workspace during development[c
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 .
