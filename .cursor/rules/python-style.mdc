@@ -1,0 +1,47 @@
+---
+description: Clean Python style for the student-marks program
+globs: "**/*.py"
+alwaysApply: true
+---
+
+# Python style for this project
+
+When changing this codebase, write readable Python. Do not copy the current messy style.
+
+## Naming
+
+- Use descriptive names: `students`, `sum_scores`, `average`, `grade`, `topper_name`.
+- Do not use one-letter names (`d`, `f`, `t`, `a`, `g`, `h`, `n`) for new code.
+- Function names should say what they return (`count_students_above_average`, not `f`).
+
+## Data
+
+- Each student row is `[name, score1, score2, score3]`. Index `0` is the name; scores start at index `1`.
+- Do not add the name into a numeric total.
+- Use a named constant for the number of subjects instead of a magic `3`.
+
+## Structure
+
+- Prefer small functions over copy-pasted loops.
+- Reuse existing helpers. Do not recompute class average in three different places.
+- If a requested feature already exists, improve that function rather than adding a second copy.
+
+## Output
+
+- Print readable reports with spaces and labels, e.g. `Rahul 258 86.0 B`, not concatenated tokens.
+- Format averages to a sensible number of decimal places.
+
+```python
+# ❌ BAD — matches the original messy file
+def f(x):
+    t = 0
+    for i in range(1, len(x)):
+        t = t + x[i]
+    return t
+
+# ✅ GOOD
+NUM_SUBJECTS = 3
+
+def sum_scores(student):
+    return sum(student[1:])
+```
